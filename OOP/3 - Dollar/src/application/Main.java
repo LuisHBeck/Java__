@@ -18,6 +18,6 @@ public class Main {
         System.out.println("");
         sc.close();
 
-        System.out.printf("Amount to be paid id reais = R$%f", CurrencyConverter.dollarToReal(price, quantity));
+        System.out.printf("Amount to be paid id reais = R$%.2f", CurrencyConverter.dollarToReal(price, quantity));
     }
 }
