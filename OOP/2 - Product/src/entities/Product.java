@@ -1,9 +1,9 @@
 package entities;
 
 public class Product {
-    public String name;
-    public double price;
-    public int stockQuantity;
+    private String name;
+    private double price;
+    private int stockQuantity;
 
     public Product() {
     }
@@ -19,6 +19,14 @@ public class Product {
         this.price = price;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void addQuantity(int value) {
         this.stockQuantity += value;
     }
@@ -30,6 +38,7 @@ public class Product {
     public double totalPrice () {
         return this.price * this.stockQuantity;
     }
+
 
     @Override
     public String toString() {
