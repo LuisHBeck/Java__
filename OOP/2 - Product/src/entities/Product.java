@@ -5,10 +5,18 @@ public class Product {
     public double price;
     public int stockQuantity;
 
+    public Product() {
+    }
+
     public Product(String name, double price, int stockQuantity) {
         this.name = name;
         this.price = price;
         this.stockQuantity = stockQuantity;
+    }
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
     }
 
     public void addQuantity(int value) {
