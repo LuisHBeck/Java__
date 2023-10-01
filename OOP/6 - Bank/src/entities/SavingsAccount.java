@@ -27,7 +27,7 @@ public class SavingsAccount extends Account{
     }
 
     @Override
-    public void withdraw(double amount) {
+    public final void withdraw(double amount) {
         if (amount <= balance) this.balance -= amount;
         else System.out.println("Denied! Insufficient balance!");
     }
