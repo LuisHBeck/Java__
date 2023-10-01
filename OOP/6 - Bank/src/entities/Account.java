@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.HashMap;
+
 public class Account {
      private Integer number;
      private String holder;
@@ -35,10 +37,13 @@ public class Account {
     }
 
     public void deposit(double amount) {
-         this.balance += amount;
+        this.balance += amount;
+
      }
 
-     public void withdraw(double amount) {
-         this.balance -= amount;
-     }
+    public void withdraw(double amount) {
+        amount += 5;
+        if (amount <= balance) this.balance -= amount;
+        else System.out.println("Denied! Insufficient balance!");
+    }
 }
